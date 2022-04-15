@@ -28,4 +28,4 @@ jobs:
           git add .
           git commit -m 'git pull --recurse-submodules'
           git push
-        if steps.diff.outcome == 'failure'
+        if: steps.diff.outcome == 'failure'
