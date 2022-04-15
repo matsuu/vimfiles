@@ -2,9 +2,9 @@ if has('python3')
   silent! python3 1
 endif
 
-" set shiftwidth=2
-" set tabstop=8
-" set softtabstop=2
+set shiftwidth=2
+set list
+set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
 
 set modeline
 set laststatus=2
