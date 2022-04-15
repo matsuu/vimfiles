@@ -1,0 +1,14 @@
+= vimfiles for ~/.vim*
+
+== Usage
+
+ cd ~
+ mv .vim .vim.old
+ git clone --recursive --depth=1 https://github.com/matsuu/vimfiles.git .vim
+ 
+ mv .vimrc .vimrc.old
+ ln -s .vim/vimrc .vimrc
+
+== References
+
+* https://tyru.hatenablog.com/entry/2017/12/20/035142[Vim 8 時代のがんばらないプラグイン管理のすすめ - Humanity]

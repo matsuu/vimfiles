@@ -13,11 +13,7 @@ set noshowmode
 syntax on
 filetype plugin indent on
 
-"let g:lsp_diagnostics_enabled = 1
-"let g:lsp_diagnostics_echo_cursor = 1
-"let g:asyncomplete_popup_delay = 200
-"let g:lsp_text_edit_enabled = 1
-"let g:goimports_simplify = 1
+let g:goimports_simplify = 1
 
 "set background=dark
 "let g:gruvbox_contrast_dark = "hard"
