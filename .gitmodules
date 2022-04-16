@@ -13,21 +13,9 @@
 [submodule "pack/sql/start/vim-sqlfmt"]
 	path = pack/syntax/start/vim-sqlfmt
 	url = https://github.com/mattn/vim-sqlfmt.git
-[submodule "pack/colorscheme/start/Lightning"]
-	path = pack/colorscheme/start/Lightning
-	url = https://github.com/wimstefan/Lightning
-[submodule "pack/colorscheme/start/gruvbox"]
-	path = pack/colorscheme/start/gruvbox
-	url = https://github.com/morhetz/gruvbox
-[submodule "pack/colorscheme/start/harlequin"]
-	path = pack/colorscheme/start/harlequin
-	url = https://github.com/nielsmadan/harlequin
 [submodule "pack/colorscheme/start/vim-colors-github"]
 	path = pack/colorscheme/start/vim-colors-github
 	url = https://github.com/cormacrelf/vim-colors-github.git
-[submodule "pack/colorscheme/start/vim-one"]
-	path = pack/colorscheme/start/vim-one
-	url = https://github.com/rakr/vim-one
 [submodule "pack/colorscheme/start/lightline.vim"]
 	path = pack/colorscheme/start/lightline.vim
 	url = https://github.com/itchyny/lightline.vim.git

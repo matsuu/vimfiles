@@ -14,14 +14,7 @@ syntax on
 filetype plugin indent on
 
 let g:goimports_simplify = 1
-
-"set background=dark
-"let g:gruvbox_contrast_dark = "hard"
-"colorscheme gruvbox
-"highlight Normal ctermbg=none ctermfg=none
-
-"colorscheme lightning
-"let g:lightline = { 'colorscheme': 'one' }
+let g:lsp_diagnostics_echo_cursor = 1
 
 colorscheme github
 let g:lightline = { 'colorscheme': 'github' }
