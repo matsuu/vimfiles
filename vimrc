@@ -1,21 +1,21 @@
 function! s:packager_init(packager) abort
-  " package
-  call a:packager.add('kristijanhusak/vim-packager', { 'type': 'opt' })
-  " autocomplete
-  call a:packager.add('prabirshrestha/asyncomplete-lsp.vim', {'requires': ['prabirshrestha/asyncomplete.vim', 'prabirshrestha/vim-lsp']})
-  call a:packager.add('mattn/vim-lsp-settings')
-  " syntax
-  call a:packager.add('cespare/vim-toml')
-  call a:packager.add('mattn/vim-sqlfmt')
-  call a:packager.add('rhysd/vim-gfm-syntax')
-  call a:packager.add('fgsch/vim-varnish')
-  call a:packager.add('hashivim/vim-terraform')
-  " git
-  call a:packager.add('tpope/vim-fugitive')
-  " colorscheme
-  call a:packager.add('nanotech/jellybeans.vim')
-  " statusline
-  call a:packager.add('itchyny/lightline.vim')
+	" package
+	call a:packager.add('kristijanhusak/vim-packager', { 'type': 'opt' })
+	" autocomplete
+	call a:packager.add('prabirshrestha/asyncomplete-lsp.vim', {'requires': ['prabirshrestha/asyncomplete.vim', 'prabirshrestha/vim-lsp']})
+	call a:packager.add('mattn/vim-lsp-settings')
+	" syntax
+	call a:packager.add('cespare/vim-toml')
+	call a:packager.add('mattn/vim-sqlfmt')
+	call a:packager.add('rhysd/vim-gfm-syntax')
+	call a:packager.add('fgsch/vim-varnish')
+	call a:packager.add('hashivim/vim-terraform')
+	" git
+	call a:packager.add('tpope/vim-fugitive')
+	" colorscheme
+	call a:packager.add('nanotech/jellybeans.vim')
+	" statusline
+	call a:packager.add('itchyny/lightline.vim')
 endfunction
 
 packadd vim-packager
@@ -36,4 +36,7 @@ autocmd BufWritePre <buffer> call execute(['LspCodeActionSync source.organizeImp
 
 "set termguicolors
 "set background=light
-colorscheme jellybeans
+try
+	colorscheme jellybeans
+	catch
+endtry
