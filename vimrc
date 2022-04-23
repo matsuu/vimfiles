@@ -7,6 +7,7 @@ function! s:packager_init(packager) abort
   call a:packager.add('rhysd/vim-gfm-syntax')
   call a:packager.add('fgsch/vim-varnish')
   call a:packager.add('hashivim/vim-terraform')
+  call a:packager.add('tpope/vim-fugitive')
   call a:packager.add('nanotech/jellybeans.vim')
   call a:packager.add('itchyny/lightline.vim')
 endfunction
