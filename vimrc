@@ -1,22 +1,19 @@
-if has('python3')
-  silent! python3 1
-endif
-call jetpack#begin()
-Jetpack 'prabirshrestha/vim-lsp'
-Jetpack 'prabirshrestha/asyncomplete-lsp.vim'
-Jetpack 'prabirshrestha/asyncomplete.vim'
-Jetpack 'mattn/vim-lsp-settings'
-Jetpack 'mattn/vim-goimports'
-Jetpack 'cespare/vim-toml'
-Jetpack 'mattn/vim-sqlfmt'
-Jetpack 'rhysd/vim-gfm-syntax'
-Jetpack 'fgsch/vim-varnish'
-Jetpack 'hashivim/vim-terraform'
-Jetpack 'chriskempson/base16-vim'
-Jetpack 'itchyny/lightline.vim'
-call jetpack#end()
+function! s:packager_init(packager) abort
+  call a:packager.add('kristijanhusak/vim-packager', { 'type': 'opt' })
+  call a:packager.add('prabirshrestha/asyncomplete-lsp.vim', {'requires': ['prabirshrestha/asyncomplete.vim', 'prabirshrestha/vim-lsp']})
+  call a:packager.add('mattn/vim-lsp-settings')
+  call a:packager.add('cespare/vim-toml')
+  call a:packager.add('mattn/vim-sqlfmt')
+  call a:packager.add('rhysd/vim-gfm-syntax')
+  call a:packager.add('fgsch/vim-varnish')
+  call a:packager.add('hashivim/vim-terraform')
+  call a:packager.add('nanotech/jellybeans.vim')
+  call a:packager.add('itchyny/lightline.vim')
+endfunction
 
-set shiftwidth=2
+packadd vim-packager
+call packager#setup(function('s:packager_init'))
+
 set list
 set listchars=tab:>\ ,trail:-,nbsp:+
 
@@ -24,12 +21,12 @@ set modeline
 set laststatus=2
 set noshowmode
 
-syntax on
 filetype plugin indent on
 
-let g:goimports_simplify = 1
+" lsp
 let g:lsp_diagnostics_echo_cursor = 1
+autocmd BufWritePre <buffer> call execute(['LspCodeActionSync source.organizeImports', 'LspDocumentFormatSync'])
 
-set termguicolors
+"set termguicolors
 "set background=light
-colorscheme base16-bright
+colorscheme jellybeans

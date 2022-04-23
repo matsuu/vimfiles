@@ -3,12 +3,6 @@
 == Usage
 
  cd ~
- mv .vim .vim.old
- git clone --recursive --depth=1 https://github.com/matsuu/vimfiles.git .vim
- 
- mv .vimrc .vimrc.old
+ git clone --depth=1 https://github.com/matsuu/vimfiles.git ~/.vim
+ git clone --depth=1 https://github.com/kristijanhusak/vim-packager.git ~/.vim/pack/packager/opt/vim-packager
  ln -s .vim/vimrc .vimrc
-
-== References
-
-* https://tyru.hatenablog.com/entry/2017/12/20/035142[Vim 8 時代のがんばらないプラグイン管理のすすめ - Humanity]
