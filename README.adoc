@@ -6,3 +6,4 @@
  git clone --depth=1 https://github.com/matsuu/vimfiles.git ~/.vim
  git clone --depth=1 https://github.com/kristijanhusak/vim-packager.git ~/.vim/pack/packager/opt/vim-packager
  ln -s .vim/vimrc .vimrc
+ vim -c PackagerInstall
