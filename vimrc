@@ -5,7 +5,6 @@ function! s:packager_init(packager) abort
 	call a:packager.add('prabirshrestha/asyncomplete-lsp.vim', {'requires': ['prabirshrestha/asyncomplete.vim', 'prabirshrestha/vim-lsp']})
 	call a:packager.add('mattn/vim-lsp-settings')
 	" syntax
-	call a:packager.add('cespare/vim-toml')
 	call a:packager.add('mattn/vim-sqlfmt')
 	call a:packager.add('rhysd/vim-gfm-syntax')
 	call a:packager.add('fgsch/vim-varnish')
