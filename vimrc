@@ -2,8 +2,9 @@ function! s:packager_init(packager) abort
 	" package
 	call a:packager.add('kristijanhusak/vim-packager', { 'type': 'opt' })
 	" autocomplete
-	call a:packager.add('prabirshrestha/asyncomplete-lsp.vim', {'requires': ['prabirshrestha/asyncomplete.vim', 'prabirshrestha/vim-lsp']})
-	call a:packager.add('mattn/vim-lsp-settings')
+	call a:packager.add('prabirshrestha/asyncomplete-lsp.vim', {'requires': ['prabirshrestha/asyncomplete.vim']})
+	call a:packager.add('mattn/vim-lsp-settings', {'requires': ['prabirshrestha/vim-lsp']})
+	call a:packager.add('hrsh7th/vim-vsnip-integ', {'requires': ['hrsh7th/vim-vsnip']})
 	" syntax
 	call a:packager.add('mattn/vim-sqlfmt')
 	call a:packager.add('rhysd/vim-gfm-syntax')
