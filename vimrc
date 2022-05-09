@@ -21,12 +21,16 @@ endfunction
 packadd vim-packager
 call packager#setup(function('s:packager_init'))
 
+set cursorline
+set cursorcolumn
+set hlsearch
+set laststatus=2
 set list
 set listchars=tab:>\ ,trail:-,nbsp:+
-
 set modeline
-set laststatus=2
 set noshowmode
+set noswapfile
+set scrolloff=4
 
 filetype plugin indent on
 
