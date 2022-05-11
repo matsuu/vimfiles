@@ -38,6 +38,40 @@ filetype plugin indent on
 " lsp
 let g:lsp_diagnostics_echo_cursor = 1
 autocmd BufWritePre <buffer> call execute(['LspCodeActionSync source.organizeImports', 'LspDocumentFormatSync'])
+let g:lsp_settings = {
+\	'gopls': {
+\		'initialization_options': {
+\			'usePlaceholders': v:true
+\		}
+\	},
+\	'sumneko-lua-language-server': {
+\		'workspace_config': {
+\			'Lua': {
+\				'completion': {
+\					'callSnippet': 'Replace'
+\				}
+\			}
+\		}
+\	}
+\}
+
+
+" asyncomplete
+inoremap <expr> <cr> pumvisible() ? asyncomplete#close_popup() : "\<cr>"
+
+" Expand
+imap <expr> <C-j> vsnip#expandable() ? '<Plug>(vsnip-expand)' : '<C-j>'
+smap <expr> <C-j> vsnip#expandable() ? '<Plug>(vsnip-expand)' : '<C-j>'
+
+" Expand or jump
+imap <expr> <C-l> vsnip#available(1) ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
+smap <expr> <C-l> vsnip#available(1) ? '<Plug>(vsnip-expand-or-jump)' : '<C-l>'
+
+" Jump forward or backward
+imap <expr> <Tab> vsnip#jumpable(1) ? '<Plug>(vsnip-jump-next)' : '<Tab>'
+smap <expr> <Tab> vsnip#jumpable(1) ? '<Plug>(vsnip-jump-next)' : '<Tab>'
+imap <expr> <S-Tab> vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-prev)' : '<S-Tab>'
+smap <expr> <S-Tab> vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-prev)' : '<S-Tab>'
 
 set background=dark
 let g:lightline = { 'colorscheme': 'PaperColor' }
