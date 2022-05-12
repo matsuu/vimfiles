@@ -28,7 +28,6 @@ set laststatus=2
 set list
 set listchars=tab:>\ ,trail:-,nbsp:+
 set modeline
-set mouse=a
 set noshowmode
 set noswapfile
 set scrolloff=4
