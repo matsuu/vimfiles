@@ -48,6 +48,9 @@ let g:lsp_settings = {
 \	'sumneko-lua-language-server': {
 \		'workspace_config': {
 \			'Lua': {
+\				'diagnostics': {
+\					'globals': [ 'vim' ],
+\				},
 \				'completion': {
 \					'callSnippet': 'Replace'
 \				}
