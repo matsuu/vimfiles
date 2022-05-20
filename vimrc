@@ -16,6 +16,8 @@ function! s:packager_init(packager) abort
 	call a:packager.add('NLKNguyen/papercolor-theme')
 	" statusline
 	call a:packager.add('itchyny/lightline.vim')
+	" undo
+	call a:packager.add('mbbill/undotree')
 endfunction
 
 packadd vim-packager
