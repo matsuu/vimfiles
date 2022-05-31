@@ -21,8 +21,6 @@ endfunction
 packadd vim-packager
 call packager#setup(function('s:packager_init'))
 
-set cursorline
-set cursorcolumn
 set hlsearch
 set laststatus=2
 set list
