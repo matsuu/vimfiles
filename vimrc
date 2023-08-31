@@ -31,6 +31,7 @@ set noswapfile
 set scrolloff=4
 
 filetype plugin indent on
+syntax enable
 
 " lsp
 let g:lsp_diagnostics_echo_cursor = 1
