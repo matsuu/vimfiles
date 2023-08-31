@@ -73,7 +73,7 @@ smap <expr> <Tab> vsnip#jumpable(1) ? '<Plug>(vsnip-jump-next)' : '<Tab>'
 imap <expr> <S-Tab> vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-prev)' : '<S-Tab>'
 smap <expr> <S-Tab> vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-prev)' : '<S-Tab>'
 
-set background=dark
+" Theme
 let g:lightline = { 'colorscheme': 'PaperColor' }
 let g:PaperColor_Theme_Options = {
 			\	'theme': {
