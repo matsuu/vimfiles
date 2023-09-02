@@ -68,7 +68,8 @@ augroup lsp_install
 augroup END
 
 let g:lsp_diagnostics_echo_cursor = 1
-autocmd BufWritePre <buffer> call execute(['LspCodeActionSync source.organizeImports', 'LspDocumentFormatSync'])
+let g:lsp_diagnostics_virtual_text_enabled = 0
+let g:lsp_hover_ui = 'preview'
 let g:lsp_settings = {
 \	'gopls': {
 \		'initialization_options': {
