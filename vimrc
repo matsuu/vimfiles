@@ -14,12 +14,15 @@ function! s:packager_init(packager) abort
 	call a:packager.add('tpope/vim-fugitive')
 	" colorscheme
 	call a:packager.add('NLKNguyen/papercolor-theme')
+	call a:packager.add('cormacrelf/vim-colors-github')
 	" statusline
 	call a:packager.add('itchyny/lightline.vim')
 	" devicon
 	call a:packager.add('ryanoasis/vim-devicons')
 	" treeview
 	call a:packager.add('preservim/nerdtree')
+	" copilot
+	call a:packager.add('github/copilot.vim')
 endfunction
 
 packadd vim-packager
@@ -109,16 +112,8 @@ imap <expr> <S-Tab> vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-prev)' : '<S-Tab>'
 smap <expr> <S-Tab> vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-prev)' : '<S-Tab>'
 
 " Theme
-let g:lightline = { 'colorscheme': 'PaperColor' }
-let g:PaperColor_Theme_Options = {
-			\	'theme': {
-			\		'default': {
-			\			'allow_bold': 1,
-			\			'allow_italic': 1
-			\		}
-			\	}
-			\}
+let g:lightline = { 'colorscheme': 'github' }
 try
-	colorscheme PaperColor
+	colorscheme github
 catch
 endtry
