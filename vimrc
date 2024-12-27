@@ -13,8 +13,7 @@ function! s:packager_init(packager) abort
 	" git
 	call a:packager.add('tpope/vim-fugitive')
 	" colorscheme
-	call a:packager.add('NLKNguyen/papercolor-theme')
-	call a:packager.add('cormacrelf/vim-colors-github')
+	call a:packager.add('google/vim-colorscheme-primary')
 	" statusline
 	call a:packager.add('itchyny/lightline.vim')
 	" devicon
@@ -112,8 +111,4 @@ imap <expr> <S-Tab> vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-prev)' : '<S-Tab>'
 smap <expr> <S-Tab> vsnip#jumpable(-1) ? '<Plug>(vsnip-jump-prev)' : '<S-Tab>'
 
 " Theme
-let g:lightline = { 'colorscheme': 'github' }
-try
-	colorscheme github
-catch
-endtry
+colorscheme primary
