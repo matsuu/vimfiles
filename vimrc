@@ -22,6 +22,8 @@ function! s:packager_init(packager) abort
 	call a:packager.add('preservim/nerdtree')
 	" copilot
 	call a:packager.add('github/copilot.vim')
+	" vcscommand
+	call a:packager.add('vim-scripts/vcscommand.vim')
 endfunction
 
 packadd vim-packager
