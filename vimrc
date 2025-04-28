@@ -22,6 +22,8 @@ function! s:packager_init(packager) abort
 	call a:packager.add('github/copilot.vim')
 	" vcscommand
 	call a:packager.add('vim-scripts/vcscommand.vim')
+	" colorscheme
+	call a:packager.add('cormacrelf/vim-colors-github')
 endfunction
 
 packadd vim-packager
@@ -31,6 +33,7 @@ set nocompatible
 syntax enable
 filetype plugin indent on
 set termguicolors
+colorscheme github
 
 set hlsearch
 set laststatus=2
