@@ -30,6 +30,7 @@ call packager#setup(function('s:packager_init'))
 set nocompatible
 syntax enable
 filetype plugin indent on
+set termguicolors
 
 set hlsearch
 set laststatus=2
@@ -39,6 +40,8 @@ set modeline
 set noshowmode
 set noswapfile
 set scrolloff=4
+set ambiwidth=double
+set nofixeol
 "set t_TI=^[[4?h
 "set t_TE=^[[4?l
 
